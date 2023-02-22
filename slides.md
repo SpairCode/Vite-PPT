@@ -172,7 +172,7 @@ $ [4/4] 🔨  Building fresh packages..
 ```
 
 ---
-transition: slide-out
+transition: slide-up
 ---
 
 ## 选择模板
@@ -218,9 +218,9 @@ transition: slide-up
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "vite",  // 启动开发服务器，别名：`vite dev`，`vite serve`
+    "build": "vite build", // 为生产环境构建产物
+    "preview": "vite preview" // 本地预览生产构建产物
   },
   "dependencies": {
     "vue": "^3.2.45"
@@ -241,7 +241,31 @@ transition: slide-up
 <style>
 .arrow {
   left: 3.75rem;
-  right: 18.5rem;;
+  bottom: 18.5rem;;
 }
 
 </style>
+
+---
+transition: slide-up
+---
+
+## Plugin
+
+```ts
+$ npm add -D @vitejs/plugin-legacy
+```
+
+```ts {monaco}
+// vite.config.js
+import legacy from '@vitejs/plugin-legacy'
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  plugins: [
+    legacy({
+      targets: ['defaults', 'not IE 11'],
+    }),
+  ],
+})
+```
