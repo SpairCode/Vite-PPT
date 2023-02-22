@@ -1,7 +1,6 @@
 ---
 theme: apple-basic
 layout: intro
-highlighter: shiki
 transition: slide-left
 ---
 
@@ -12,7 +11,21 @@ transition: slide-left
 <div class="image-box"></div>
 <img  src="https://cn.vitejs.dev/logo-with-shadow.png" />
 
+<div @click="$slidev.nav.next" class="button px-2 py-1 rounded cursor-pointer" hover="bg-opacity-10">
+  开始
+</div>
+
 <style>
+.button {
+  width: 100px;
+  height: 30px;
+  line-height: 23px;
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+  background-color: #646cff;
+}
+
 h1, h2 {
   background: -webkit-linear-gradient( 120deg, #bd34fe 30%, #41d1ff );
     -webkit-text-fill-color: transparent;
@@ -125,7 +138,6 @@ transition: slide-up
 </style>
 
 ---
-highlighter: prism
 transition: slide-up
 ---
 
@@ -143,15 +155,93 @@ $ npm create vite@latest
 $ yarn create vite
 ```
 
+使用 Yarn:·
+
+```ts
+$ yarn create vite
+
+$ yarn create v1.22.10
+$ [1/4] 🔍  Resolving packages...
+$ [2/4] 🚚  Fetching packages...
+$ [3/4] 🔗  Linking dependencies...
+$ [4/4] 🔨  Building fresh packages..
+```
+
+```ts {monaco}
+? Project name: › vite-project
+```
+
 ---
-highlighter: shiki
 transition: slide-out
 ---
 
-## Page 3
+## 选择模板
 
-Directly use code blocks for highlighting
+```ts 
+? Select a framework: › - Use arrow-keys. Return to submit.
+    Vanilla
+❯   Vue
+    React
+    Preact
+    Lit
+    Svelte
+    Others
+```
+选择语言
 
 ```ts
-console.log("Hello, Vue!");
+? Select a variant: › - Use arrow-keys. Return to submit.
+❯   JavaScript
+    TypeScript
+    Customize with create-vue ↗
+    Nuxt ↗
+
 ```
+运行
+
+```ts
+Done. Now run:
+  cd my-porject
+  yarn
+  yarn dev
+```  
+---
+transition: slide-up
+---
+
+## 进入项目
+
+```json
+{
+  "name": "my-porject",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vite": "^4.1.0"
+  }
+}
+```
+<img
+  v-click
+  class="absolute arrow w-80 opacity-50"
+  src="https://sli.dev/assets/arrow-bottom-left.svg"
+/>
+
+
+<style>
+.arrow {
+  left: 3.75rem;
+  right: 18.5rem;;
+}
+
+</style>
