@@ -10,6 +10,7 @@
     "@slidev/cli": "^0.40.3",
     "@slidev/theme-apple-basic": "^0.20.0",
     "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*"
+    "@slidev/theme-seriph": "*",
+    "@vitejs/plugin-legacy": "^4.0.1"
   }
 }
