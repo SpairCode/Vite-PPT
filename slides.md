@@ -19,7 +19,7 @@ transition: slide-left
 .button {
   width: 100px;
   height: 30px;
-  line-height: 23px;
+  line-height: 20px;
   text-align: center;
   margin-top: 30px;
   color: #fff;
@@ -141,7 +141,7 @@ transition: slide-up
 transition: slide-up
 ---
 
-## 创建第一个 Vite 项目
+### 创建第一个 Vite 项目
 
 使用 NPM:
 
@@ -175,7 +175,7 @@ $ [4/4] 🔨  Building fresh packages..
 transition: slide-up
 ---
 
-## 选择模板
+### 选择模板
 
 ```ts 
 ? Select a framework: › - Use arrow-keys. Return to submit.
@@ -209,9 +209,9 @@ Done. Now run:
 transition: slide-up
 ---
 
-## 进入项目
+### 进入项目
 
-```json
+```ts
 {
   "name": "my-porject",
   "private": true,
@@ -250,13 +250,64 @@ transition: slide-up
 transition: slide-up
 ---
 
+### 开发环境配置
+
+```ts
+// .env.development
+// 开发环境
+VITE_APP_APP_ID = edu-city-test-V1-1
+
+// 测试环境打包配置
+# VITE_APP_BASE_API = '/'
+// 开发环境打包配置
+#VITE_APP_BASE_API = 'http://10.40.163.34:9090'
+// 其他配置
+VITE_APP_BASE_LOGIN_REDIRECT_URL = http://localhost:8090/
+VITE_APP_BASE_SSO_SERVER_URL = https://test-open.changyan.com/sso
+VITE_APP_BASE_SSO_CENTER_SERVER_URL= https://test-open.changyan.com/sso
+VITE_APP_BASE_LOGIN_URL= https://wuhutestbasic.changyan.cn/desktop/home/#/
+```
+<img
+  v-click
+  class="absolute arrow w-80 opacity-50"
+  src="https://sli.dev/assets/arrow-bottom-left.svg"
+/>
+
+
+<style>
+.arrow {
+  left: 3.75rem;
+  bottom: 18.5rem;;
+}
+
+</style>
+
+---
+transition: slide-up
+---
+
+### 静态部署项目
+
+```json
+ "scripts": {
+    "dev": "vite",  // 启动开发服务器，别名：`vite dev`，`vite serve`
+    "build:dev": "vite build --mode development",
+    "build:prod": "vite build --mode production"
+    "preview": "vite preview" // 本地预览生产构建产物
+  },
+```
+
+---
+transition: slide-up
+---
+
 ## Plugin
 
 ```ts
 $ npm add -D @vitejs/plugin-legacy
 ```
 
-```ts {monaco}
+```ts
 // vite.config.js
 import legacy from '@vitejs/plugin-legacy'
 import { defineConfig } from 'vite'
@@ -270,3 +321,9 @@ export default defineConfig({
 })
 
 ```
+
+---
+layout: statement
+---
+
+# Thanks

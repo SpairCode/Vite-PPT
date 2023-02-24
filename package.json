@@ -12,5 +12,8 @@
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*",
     "@vitejs/plugin-legacy": "^4.0.1"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.31.1"
   }
 }
